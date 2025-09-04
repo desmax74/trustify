@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1749225147759,
+  "lastUpdate": 1756974293924,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8259,6 +8259,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/93df8ff9958e4dea60bbb52a90b84e139e44a75a"
         },
         "date": 1749225146823,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "49699333+dependabot[bot]@users.noreply.github.com",
+            "name": "dependabot[bot]",
+            "username": "dependabot[bot]"
+          },
+          "committer": {
+            "email": "00hf11@gmail.com",
+            "name": "Helio Frota",
+            "username": "helio-frota"
+          },
+          "distinct": true,
+          "id": "9c3b0a4eac9981c11fdc6a487c1986aa3d3d5ddc",
+          "message": "chore(deps): bump slab from 0.4.10 to 0.4.11\n\nBumps [slab](https://github.com/tokio-rs/slab) from 0.4.10 to 0.4.11.\n- [Release notes](https://github.com/tokio-rs/slab/releases)\n- [Changelog](https://github.com/tokio-rs/slab/blob/master/CHANGELOG.md)\n- [Commits](https://github.com/tokio-rs/slab/compare/v0.4.10...v0.4.11)\n\n---\nupdated-dependencies:\n- dependency-name: slab\n  dependency-version: 0.4.11\n  dependency-type: indirect\n...\n\nSigned-off-by: dependabot[bot] <support@github.com>",
+          "timestamp": "2025-09-03T12:16:25Z",
+          "tree_id": "8ba1f0c85336904befb51b9f65f5e183da6a8d33",
+          "url": "https://github.com/desmax74/trustify/commit/9c3b0a4eac9981c11fdc6a487c1986aa3d3d5ddc"
+        },
+        "date": 1756974292758,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
