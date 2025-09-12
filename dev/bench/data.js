@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1756974293924,
+  "lastUpdate": 1757668691744,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8288,6 +8288,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/9c3b0a4eac9981c11fdc6a487c1986aa3d3d5ddc"
         },
         "date": 1756974292758,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "dbosanac@redhat.com",
+            "name": "Dejan Bosanac",
+            "username": "dejanb"
+          },
+          "committer": {
+            "email": "dbosanac@redhat.com",
+            "name": "Dejan Bosanac",
+            "username": "dejanb"
+          },
+          "distinct": true,
+          "id": "3818788ca7f893d3d9bfa03bd71b03216017a857",
+          "message": "chore: update related projects and links\n\n* Removed ansible and operator links until we have Trustify (upstream)\nversions for them.\n* Added location of results for benchmarks and scale tests\n\nSigned-off-by: Dejan Bosanac <dbosanac@redhat.com>",
+          "timestamp": "2025-09-11T14:02:36Z",
+          "tree_id": "19cfa827b9a066d1aca8f377b238feb9f737697d",
+          "url": "https://github.com/desmax74/trustify/commit/3818788ca7f893d3d9bfa03bd71b03216017a857"
+        },
+        "date": 1757668690744,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
