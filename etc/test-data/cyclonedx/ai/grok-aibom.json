@@ -1,0 +1,137 @@
+{
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:7b9d2a1f-4e3b-4c7a-9f2e-8d5a6b3c1f2e",
+  "version": 1,
+  "metadata": {
+    "timestamp": "2025-09-10T15:59:00Z",
+    "tools": [
+      {
+        "vendor": "xAI",
+        "name": "AIBOM Generator",
+        "version": "1.0.0"
+      }
+    ],
+    "authors": [
+      {
+        "name": "xAI Team",
+        "email": "info@x.ai"
+      }
+    ],
+    "component": {
+      "type": "machine-learning-model",
+      "name": "Grok",
+      "version": "3.0",
+      "bom-ref": "grok-model",
+      "group": "xAI",
+      "description": "Grok, a large language model developed by xAI for natural language processing and reasoning tasks.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://x.ai/grok"
+        }
+      ]
+    }
+  },
+  "components": [
+    {
+      "type": "machine-learning-model",
+      "name": "Grok",
+      "version": "3.0",
+      "bom-ref": "grok-model",
+      "group": "xAI",
+      "description": "A transformer-based large language model for conversational AI.",
+      "properties": [
+        {
+          "name": "model-type",
+          "value": "Transformer"
+        },
+        {
+          "name": "parameters",
+          "value": "Unknown (proprietary)"
+        },
+        {
+          "name": "intended-use",
+          "value": "Conversational AI, question answering, reasoning"
+        }
+      ]
+    },
+    {
+      "type": "data",
+      "name": "Grok Training Dataset",
+      "version": "1.0",
+      "bom-ref": "grok-training-data",
+      "group": "xAI",
+      "description": "Hypothetical dataset used for training Grok, including web data, books, and curated text corpora.",
+      "properties": [
+        {
+          "name": "data-type",
+          "value": "Text"
+        },
+        {
+          "name": "provenance",
+          "value": "Web crawls, public domain books, licensed datasets"
+        },
+        {
+          "name": "size",
+          "value": "Unknown"
+        }
+      ]
+    },
+    {
+      "type": "library",
+      "name": "PyTorch",
+      "version": "2.3.0",
+      "bom-ref": "pytorch-2.3.0",
+      "group": "pytorch",
+      "description": "Open-source machine learning framework used for model training.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://pytorch.org"
+        }
+      ],
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "placeholder-hash-pytorch"
+        }
+      ]
+    },
+    {
+      "type": "operating-system",
+      "name": "Ubuntu",
+      "version": "22.04",
+      "bom-ref": "ubuntu-22.04",
+      "description": "Operating system used for training environment.",
+      "externalReferences": [
+        {
+          "type": "website",
+          "url": "https://ubuntu.com"
+        }
+      ]
+    }
+  ],
+  "dependencies": [
+    {
+      "ref": "grok-model",
+      "dependsOn": [
+        "grok-training-data",
+        "pytorch-2.3.0",
+        "ubuntu-22.04"
+      ]
+    },
+    {
+      "ref": "grok-training-data",
+      "dependsOn": []
+    },
+    {
+      "ref": "pytorch-2.3.0",
+      "dependsOn": []
+    },
+    {
+      "ref": "ubuntu-22.04",
+      "dependsOn": []
+    }
+  ]
+}

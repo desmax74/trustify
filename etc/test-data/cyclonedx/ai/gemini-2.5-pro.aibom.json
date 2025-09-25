@@ -1,0 +1,64 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1111-2222-3333-4444-555566667780",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "ai/model",
+      "name": "gemini-2.5-pro",
+      "version": "2.5",
+      "description": "Google's Gemini 2.5 Pro, a multimodal LLM excelling in search integration and efficiency.",
+      "publisher": "Google",
+      "licenses": [
+        {
+          "license": {
+            "name": "Proprietary"
+          }
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "Google"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "gemini-2.5-pro-model",
+      "type": "ai/model",
+      "publisher": "Google",
+      "name": "gemini-2.5-pro",
+      "version": "2.5",
+      "description": "Advanced model for text, image, and code generation.",
+      "purl": "pkg:ai/google/gemini-2.5-pro@2.5",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "placeholder-sha256-for-gemini-2.5-pro"
+        }
+      ],
+      "modelCard": {
+        "modelParameters": {
+          "approach": {
+            "type": "supervised"
+          },
+          "task": "multimodal-processing",
+          "architectureFamily": "transformer",
+          "datasets": [
+            {
+              "ref": "google-web-data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "google-web-data",
+      "type": "data",
+      "name": "Google Web Dataset",
+      "version": "2025",
+      "description": "Large-scale web crawl for training."
+    }
+  ]
+}

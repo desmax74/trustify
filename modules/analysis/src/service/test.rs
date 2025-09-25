@@ -137,6 +137,72 @@ async fn test_simple_analysis_cyclonedx_service(
 
 #[test_context(TrustifyContext)]
 #[test(tokio::test)]
+async fn test_simple_analysis_aibom_cyclonedx_service(
+    ctx: &TrustifyContext,
+) -> Result<(), anyhow::Error> {
+    ctx.ingest_documents(["cyclonedx/ai/claude-4-opus.aibom.json"])
+    /*, "cyclonedx/ai/deepseek-r1.aibom.json",
+                         "cyclonedx/ai/falcon-180b.aibom.json", "cyclonedx/ai/gemini-2.5-pro.aibom",
+    "cyclonedx/ai/gpt-5.aibom", "cyclonedx/ai/gpt-o3-mini.aibom.aibom", "cyclonedx/ai/grok-4.aibom.aibom",
+        "cyclonedx/ai/grok-aibom.aibom", "cyclonedx/ai/llama-3.1.aibom.aibom", "cyclonedx/ai/mistral-large-2.aibom.aibom",
+        "cyclonedx/ai/qwen-3.aibom.aibom"])*/
+        .await?;
+
+    let service = AnalysisService::new(AnalysisConfig::default(), ctx.db.clone());
+
+    let analysis_graph = service
+        .retrieve(
+            &Query::q("DD"),
+            QueryOptions::ancestors(),
+            Paginated::default(),
+            &ctx.db,
+        )
+        .await?;
+
+    log::debug!("Before: {analysis_graph:#?}");
+    let analysis_graph = analysis_graph.root_traces();
+    log::debug!("After: {analysis_graph:#?}");
+
+    assert_root_traces(&analysis_graph.items, |traces| {
+        assert!(
+            matches!(
+                traces[..],
+                [[
+                    ..,
+                    Node {
+                        //id: "aa",
+                        name: "claude-4-opus",
+                        purls: ["pkg:ai/anthropic/claude-4-opus@4.0"],
+                        ..
+                    }
+                ]]
+            ),
+            "doesn't match: {traces:#?}"
+        );
+    });
+    assert_eq!(analysis_graph.total, 1);
+
+    // ensure we set implicit relationship on components with no defined relationships
+    let analysis_graph = service
+        .retrieve(
+            &Query::q("EE"),
+            QueryOptions::ancestors(),
+            Paginated::default(),
+            &ctx.db,
+        )
+        .await?;
+
+    log::debug!("Before: {analysis_graph:#?}");
+    let analysis_graph = analysis_graph.root_traces();
+    log::debug!("After: {analysis_graph:#?}");
+
+    assert_eq!(analysis_graph.total, 1);
+
+    Ok(())
+}
+
+#[test_context(TrustifyContext)]
+#[test(tokio::test)]
 async fn test_simple_by_name_analysis_service(ctx: &TrustifyContext) -> Result<(), anyhow::Error> {
     ctx.ingest_documents(["spdx/simple.json"]).await?;
 

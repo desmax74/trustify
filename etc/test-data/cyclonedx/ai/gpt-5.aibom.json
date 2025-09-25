@@ -1,0 +1,64 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1111-2222-3333-4444-555566667777",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "ai/model",
+      "name": "gpt-5",
+      "version": "5.0",
+      "description": "OpenAI's flagship large language model for advanced natural language processing, reasoning, and multimodal tasks.",
+      "publisher": "OpenAI",
+      "licenses": [
+        {
+          "license": {
+            "name": "Proprietary"
+          }
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "OpenAI"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "gpt-5-model",
+      "type": "ai/model",
+      "publisher": "OpenAI",
+      "name": "gpt-5",
+      "version": "5.0",
+      "description": "Advanced LLM trained on vast datasets for text generation, code, and vision.",
+      "purl": "pkg:ai/openai/gpt-5@5.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "placeholder-sha256-for-gpt-5"
+        }
+      ],
+      "modelCard": {
+        "modelParameters": {
+          "approach": {
+            "type": "supervised"
+          },
+          "task": "natural-language-processing",
+          "architectureFamily": "transformer",
+          "datasets": [
+            {
+              "ref": "common-crawl-data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "common-crawl-data",
+      "type": "data",
+      "name": "Common Crawl",
+      "version": "2025",
+      "description": "Web-scale dataset used in pre-training."
+    }
+  ]
+}

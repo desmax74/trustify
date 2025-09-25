@@ -1,0 +1,64 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1111-2222-3333-4444-555566667785",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "ai/model",
+      "name": "gpt-o3-mini",
+      "version": "o3-mini",
+      "description": "OpenAI's lightweight GPT-o3-mini for efficient inference on edge devices.",
+      "publisher": "OpenAI",
+      "licenses": [
+        {
+          "license": {
+            "name": "Proprietary"
+          }
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "OpenAI"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "gpt-o3-mini-model",
+      "type": "ai/model",
+      "publisher": "OpenAI",
+      "name": "gpt-o3-mini",
+      "version": "o3-mini",
+      "description": "Compact LLM for mobile and low-resource environments.",
+      "purl": "pkg:ai/openai/gpt-o3-mini@o3-mini",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "placeholder-sha256-for-gpt-o3-mini"
+        }
+      ],
+      "modelCard": {
+        "modelParameters": {
+          "approach": {
+            "type": "supervised"
+          },
+          "task": "text-classification",
+          "architectureFamily": "transformer",
+          "datasets": [
+            {
+              "ref": "openai-mini-data"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "openai-mini-data",
+      "type": "data",
+      "name": "OpenAI Mini Dataset",
+      "version": "2025",
+      "description": "Subset for lightweight training."
+    }
+  ]
+}

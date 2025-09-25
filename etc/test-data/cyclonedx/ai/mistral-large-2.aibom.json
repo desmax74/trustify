@@ -1,0 +1,64 @@
+{
+  "$schema": "http://cyclonedx.org/schema/bom-1.6.schema.json",
+  "bomFormat": "CycloneDX",
+  "specVersion": "1.6",
+  "serialNumber": "urn:uuid:1111-2222-3333-4444-555566667782",
+  "version": 1,
+  "metadata": {
+    "component": {
+      "type": "ai/model",
+      "name": "mistral-large-2",
+      "version": "2.0",
+      "description": "Mistral AI's Large 2, optimized for speed and enterprise use cases.",
+      "publisher": "Mistral AI",
+      "licenses": [
+        {
+          "license": {
+            "name": "Apache-2.0"
+          }
+        }
+      ]
+    },
+    "manufacturer": {
+      "name": "Mistral AI"
+    }
+  },
+  "components": [
+    {
+      "bom-ref": "mistral-large-2-model",
+      "type": "ai/model",
+      "publisher": "Mistral AI",
+      "name": "mistral-large-2",
+      "version": "2.0",
+      "description": "High-speed LLM for coding and translation.",
+      "purl": "pkg:ai/mistral/large-2@2.0",
+      "hashes": [
+        {
+          "alg": "SHA-256",
+          "content": "placeholder-sha256-for-mistral-large-2"
+        }
+      ],
+      "modelCard": {
+        "modelParameters": {
+          "approach": {
+            "type": "supervised"
+          },
+          "task": "code-generation",
+          "architectureFamily": "transformer",
+          "datasets": [
+            {
+              "ref": "mistral-data-mix"
+            }
+          ]
+        }
+      }
+    },
+    {
+      "bom-ref": "mistral-data-mix",
+      "type": "data",
+      "name": "Mistral Data Mix",
+      "version": "2025",
+      "description": "Diverse dataset for Mistral models."
+    }
+  ]
+}
