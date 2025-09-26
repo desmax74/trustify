@@ -140,12 +140,7 @@ async fn test_simple_analysis_cyclonedx_service(
 async fn test_simple_analysis_aibom_cyclonedx_service(
     ctx: &TrustifyContext,
 ) -> Result<(), anyhow::Error> {
-    ctx.ingest_documents(["cyclonedx/ai/claude-4-opus.aibom.json"])
-    /*, "cyclonedx/ai/deepseek-r1.aibom.json",
-                         "cyclonedx/ai/falcon-180b.aibom.json", "cyclonedx/ai/gemini-2.5-pro.aibom",
-    "cyclonedx/ai/gpt-5.aibom", "cyclonedx/ai/gpt-o3-mini.aibom.aibom", "cyclonedx/ai/grok-4.aibom.aibom",
-        "cyclonedx/ai/grok-aibom.aibom", "cyclonedx/ai/llama-3.1.aibom.aibom", "cyclonedx/ai/mistral-large-2.aibom.aibom",
-        "cyclonedx/ai/qwen-3.aibom.aibom"])*/
+    ctx.ingest_documents(["cyclonedx/ai/ibm-granite_granite-docling-258M_aibom.json"])
         .await?;
 
     let service = AnalysisService::new(AnalysisConfig::default(), ctx.db.clone());
@@ -171,8 +166,8 @@ async fn test_simple_analysis_aibom_cyclonedx_service(
                     ..,
                     Node {
                         //id: "aa",
-                        name: "claude-4-opus",
-                        purls: ["pkg:ai/anthropic/claude-4-opus@4.0"],
+                        name: "granite-docling-258M",
+                        purls: ["pkg:huggingface/ibm-granite/granite-docling-258M@1.0"],
                         ..
                     }
                 ]]
