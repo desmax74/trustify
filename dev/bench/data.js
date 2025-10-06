@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1757668691744,
+  "lastUpdate": 1759742037347,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8317,6 +8317,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/3818788ca7f893d3d9bfa03bd71b03216017a857"
         },
         "date": 1757668690744,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jim@crossleys.org",
+            "name": "Jim Crossley",
+            "username": "jcrossley3"
+          },
+          "committer": {
+            "email": "jim@crossleys.org",
+            "name": "Jim Crossley",
+            "username": "jcrossley3"
+          },
+          "distinct": false,
+          "id": "df18dbb3ca0577e6099c2b56760fb56e81931d30",
+          "message": "feat: disable GC for orphaned packages by default\n\nDownstream issue: https://issues.redhat.com/browse/TC-2958",
+          "timestamp": "2025-10-01T12:55:24Z",
+          "tree_id": "861a740dc3e42faa60eb6ce9741c9c81eab2b4db",
+          "url": "https://github.com/desmax74/trustify/commit/df18dbb3ca0577e6099c2b56760fb56e81931d30"
+        },
+        "date": 1759742035701,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
