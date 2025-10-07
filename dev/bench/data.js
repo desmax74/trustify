@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1759742037347,
+  "lastUpdate": 1759831291997,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8346,6 +8346,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/df18dbb3ca0577e6099c2b56760fb56e81931d30"
         },
         "date": 1759742035701,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "00hf11@gmail.com",
+            "name": "Helio Frota",
+            "username": "helio-frota"
+          },
+          "committer": {
+            "email": "00hf11@gmail.com",
+            "name": "Helio Frota",
+            "username": "helio-frota"
+          },
+          "distinct": true,
+          "id": "9fdba718d91b8d044145f118f72d7f343249fb43",
+          "message": "chore: silence tempo warning message\n\nSigned-off-by: Helio Frota <00hf11@gmail.com>\n\n* Also adds instrument macro to delete_sbom function",
+          "timestamp": "2025-10-06T11:33:06Z",
+          "tree_id": "c35745f6d35e863b3ffa60c4d63e69b68d6a13bd",
+          "url": "https://github.com/desmax74/trustify/commit/9fdba718d91b8d044145f118f72d7f343249fb43"
+        },
+        "date": 1759831290731,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
