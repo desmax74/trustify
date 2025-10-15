@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1759831291997,
+  "lastUpdate": 1760516931308,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8375,6 +8375,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/9fdba718d91b8d044145f118f72d7f343249fb43"
         },
         "date": 1759831290731,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "noah@santschi-cooney.ch",
+            "name": "Noah Santschi-Cooney",
+            "username": "Strum355"
+          },
+          "committer": {
+            "email": "noah@santschi-cooney.ch",
+            "name": "Noah S-C",
+            "username": "Strum355"
+          },
+          "distinct": true,
+          "id": "fac608a0dba695d93acd4f3fade2c2ecb877e825",
+          "message": "feat(api): recommendations api",
+          "timestamp": "2025-10-14T07:58:40Z",
+          "tree_id": "bbd530e79368b80691125d0da5c7c1ab9bb06457",
+          "url": "https://github.com/desmax74/trustify/commit/fac608a0dba695d93acd4f3fade2c2ecb877e825"
+        },
+        "date": 1760516930255,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
