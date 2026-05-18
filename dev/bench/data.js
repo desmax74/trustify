@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1760516931308,
+  "lastUpdate": 1779102967545,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8409,6 +8409,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "Ingest DS3",
             "value": 8,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ctron@dentrassi.de",
+            "name": "Jens Reimann",
+            "username": "ctron"
+          },
+          "committer": {
+            "email": "ctron@dentrassi.de",
+            "name": "Jens Reimann",
+            "username": "ctron"
+          },
+          "distinct": true,
+          "id": "2f5c9ba6b63423a7f474308e9cd95c41b53ebdf2",
+          "message": "fix(fundamental): describe proper return time for openapi schema",
+          "timestamp": "2026-05-15T13:28:47Z",
+          "tree_id": "1fcfb760196345847070e1da37d738e4e5e725eb",
+          "url": "https://github.com/desmax74/trustify/commit/2f5c9ba6b63423a7f474308e9cd95c41b53ebdf2"
+        },
+        "date": 1779102966187,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 10,
             "unit": "s"
           }
         ]
