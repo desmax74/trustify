@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1779102967545,
+  "lastUpdate": 1781175634829,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8438,6 +8438,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "Ingest DS3",
             "value": 10,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "ctron@dentrassi.de",
+            "name": "Jens Reimann",
+            "username": "ctron"
+          },
+          "committer": {
+            "email": "ctron@dentrassi.de",
+            "name": "Jens Reimann",
+            "username": "ctron"
+          },
+          "distinct": true,
+          "id": "d00dd3421a78eb63ca48b93d402261d3a6ceaf83",
+          "message": "fix!: make all DELETE endpoints idempotent\n\nAlign DELETE behavior across product, sbom, and advisory endpoints to\nalways return 204 No Content, making them idempotent. Previously some\nreturned 404 on missing resources and 200 with a JSON body on success.\n\nDocument the DELETE idempotency convention in CONVENTIONS.md, including\nthe If-Match revision check exception.\n\nCo-Authored-By: Claude Opus 4.6 <noreply@anthropic.com>",
+          "timestamp": "2026-06-11T06:18:33Z",
+          "tree_id": "b230586acacdd42de2f3f2576de881a6b6c57889",
+          "url": "https://github.com/desmax74/trustify/commit/d00dd3421a78eb63ca48b93d402261d3a6ceaf83"
+        },
+        "date": 1781175633594,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 9,
             "unit": "s"
           }
         ]
