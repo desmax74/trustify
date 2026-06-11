@@ -1,4 +1,6 @@
 #![allow(clippy::expect_used)]
+#![recursion_limit = "256"]
+#![allow(clippy::useless_conversion)]
 
 use super::prepare_ps_state_change;
 use test_context::test_context;
