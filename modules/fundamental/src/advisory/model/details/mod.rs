@@ -1,3 +1,4 @@
+#![allow(clippy::useless_conversion)]
 pub mod advisory_vulnerability;
 
 use crate::advisory::service::AdvisoryCatcher;

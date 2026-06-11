@@ -1,4 +1,5 @@
 #![allow(clippy::unwrap_used)]
+#![recursion_limit = "256"]
 
 use bytes::BytesMut;
 use futures_util::StreamExt;

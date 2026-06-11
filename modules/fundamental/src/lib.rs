@@ -1,5 +1,6 @@
-#![recursion_limit = "256"]
-
+#![recursion_limit = "512"]
+#[allow(clippy::useless_conversion)]
+#[allow(clippy::unnecessary_sort_by)]
 pub mod advisory;
 pub mod common;
 pub mod db;

@@ -474,6 +474,7 @@ mod test {
         let mut advs = system
             .get_advisories(Deprecation::Consider, &ctx.db)
             .await?;
+        #[allow(clippy::unnecessary_sort_by)]
         advs.sort_unstable_by(|a, b| a.advisory.modified.cmp(&b.advisory.modified));
         let deps = advs
             .iter()

@@ -1,4 +1,5 @@
 #![allow(clippy::expect_used)]
+#![allow(clippy::useless_conversion)]
 
 use super::prepare_ps_state_change;
 use test_context::test_context;
@@ -119,6 +120,7 @@ async fn delete_check_vulns(ctx: &TrustifyContext) -> anyhow::Result<()> {
     // must be 1, as we deleted the latter one
 
     assert_eq!(purl.advisories.len(), 1);
+    #[allow(clippy::unnecessary_sort_by)]
     purl.advisories
         .sort_unstable_by(|a, b| a.head.modified.cmp(&b.head.modified));
     let adv1 = &purl.advisories[0];

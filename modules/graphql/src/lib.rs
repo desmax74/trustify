@@ -1,3 +1,4 @@
+#![recursion_limit = "256"]
 pub mod advisory;
 pub mod endpoints;
 pub mod organization;
