@@ -46,6 +46,9 @@ jobs:
           df -h
 
       - uses: actions/checkout@v5
+      - uses: ./.github/actions/setup-rust
+        with:
+          components: llvm-tools-preview
       - uses: Swatinem/rust-cache@v2
         with:
           key: tarpaulin
