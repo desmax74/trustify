@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1781259696823,
+  "lastUpdate": 1781596046920,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8525,6 +8525,35 @@ window.BENCHMARK_DATA = {
           {
             "name": "Ingest DS3",
             "value": 9,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mdessi@redhat.com",
+            "name": "desmax74",
+            "username": "desmax74"
+          },
+          "committer": {
+            "email": "desmax74@users.noreply.github.com",
+            "name": "Massimiliano Dessì - (Fast Chauffeur)",
+            "username": "desmax74"
+          },
+          "distinct": true,
+          "id": "628aca46b7893fd206d843d527914f001c166344",
+          "message": "Refactor to centralize configuration\n\nSigned-off-by: desmax74 <mdessi@redhat.com>",
+          "timestamp": "2026-06-15T14:25:52Z",
+          "tree_id": "f3ae31cf01069b51b39666196ea461b204ac2037",
+          "url": "https://github.com/desmax74/trustify/commit/628aca46b7893fd206d843d527914f001c166344"
+        },
+        "date": 1781596046205,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 10,
             "unit": "s"
           }
         ]
