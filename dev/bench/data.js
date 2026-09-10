@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1788279210730,
+  "lastUpdate": 1789024303214,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8612,6 +8612,34 @@ window.BENCHMARK_DATA = {
           {
             "name": "Ingest DS3",
             "value": 7,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "mdessi@mdessi-thinkpadp1gen8.rmtit.csb",
+            "name": "Max Dessi"
+          },
+          "committer": {
+            "email": "desmax74@users.noreply.github.com",
+            "name": "Massimiliano Dessì - (Fast Chauffeur)",
+            "username": "desmax74"
+          },
+          "distinct": true,
+          "id": "16a6a12205d96cab0145c633e1e0233b7e5a10d6",
+          "message": "Token auth S3/RDS\n\nSigned-off-by: Max Dessi <mdessi@mdessi-thinkpadp1gen8.rmtit.csb>",
+          "timestamp": "2026-09-09T15:27:33Z",
+          "tree_id": "f97d3b4351c57ff81818d4e0b5ade0dfb1220d8a",
+          "url": "https://github.com/desmax74/trustify/commit/16a6a12205d96cab0145c633e1e0233b7e5a10d6"
+        },
+        "date": 1789024301921,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 9,
             "unit": "s"
           }
         ]
