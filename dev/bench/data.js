@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1789123572734,
+  "lastUpdate": 1789639304430,
   "repoUrl": "https://github.com/desmax74/trustify",
   "entries": {
     "Benchmark": [
@@ -8664,6 +8664,35 @@ window.BENCHMARK_DATA = {
           "url": "https://github.com/desmax74/trustify/commit/e3c8529f4471926f958fd4ad662d33995025c120"
         },
         "date": 1789123570785,
+        "tool": "customSmallerIsBetter",
+        "benches": [
+          {
+            "name": "Ingest DS3",
+            "value": 9,
+            "unit": "s"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "rromerom@redhat.com",
+            "name": "Ruben Romero Montes",
+            "username": "ruromero"
+          },
+          "committer": {
+            "email": "rromerom@redhat.com",
+            "name": "Ruben Romero Montes",
+            "username": "ruromero"
+          },
+          "distinct": true,
+          "id": "25d3505eed23d09421696525c6cf5a7e16d35b7e",
+          "message": "docs(conventions): fix example to follow its own import rule\n\nCo-Authored-By: Claude Sonnet 4.6 (1M context) <noreply@anthropic.com>",
+          "timestamp": "2026-09-16T16:38:05Z",
+          "tree_id": "77fc621f2fe8e076dbbdbe179c8764544e59be9f",
+          "url": "https://github.com/desmax74/trustify/commit/25d3505eed23d09421696525c6cf5a7e16d35b7e"
+        },
+        "date": 1789639303197,
         "tool": "customSmallerIsBetter",
         "benches": [
           {
